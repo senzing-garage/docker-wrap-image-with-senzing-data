@@ -1,0 +1,1 @@
+# docker-wrap-image-with-senzing-data
