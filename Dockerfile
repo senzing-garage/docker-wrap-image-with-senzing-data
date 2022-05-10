@@ -5,7 +5,7 @@ ENV REFRESHED_AT=2022-05-09
 
 LABEL Name="senzing/docker-wrap-image-with-senzing-data" \
       Maintainer="support@senzing.com" \
-      Version="0.0.0"
+      Version="1.0.0"
 
 # SENZING_ACCEPT_EULA to be replaced by --build-arg
 
@@ -39,7 +39,7 @@ RUN curl \
 #   Note: The system location for "data" should be /opt/senzing/data, hence the "mv" command.
 
 RUN apt -y install senzingapi \
- && mv /opt/senzing/data/2.0.0/* /opt/senzing/data/ \
+ && mv /opt/senzing/data/3.0.0/* /opt/senzing/data/ \
  && rm -rf /opt/senzing/g2
 
 # Finally, make the container a non-root container again.
