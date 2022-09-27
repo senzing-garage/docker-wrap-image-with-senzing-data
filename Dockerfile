@@ -1,7 +1,7 @@
-ARG BASE_IMAGE=senzing/senzing-base:1.6.11
+ARG BASE_IMAGE=senzing/senzing-base:1.6.12
 FROM ${BASE_IMAGE}
 
-ENV REFRESHED_AT=2022-08-25
+ENV REFRESHED_AT=2022-09-27
 
 LABEL Name="senzing/docker-wrap-image-with-senzing-data" \
       Maintainer="support@senzing.com" \
