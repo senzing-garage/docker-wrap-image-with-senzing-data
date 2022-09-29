@@ -5,7 +5,7 @@ ENV REFRESHED_AT=2022-09-27
 
 LABEL Name="senzing/docker-wrap-image-with-senzing-data" \
       Maintainer="support@senzing.com" \
-      Version="1.0.0"
+      Version="1.0.1"
 
 # SENZING_ACCEPT_EULA to be replaced by --build-arg
 
