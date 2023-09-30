@@ -1,11 +1,11 @@
-ARG BASE_IMAGE=senzing/senzing-base:1.6.20
+ARG BASE_IMAGE=senzing/senzing-base:1.6.21
 FROM ${BASE_IMAGE}
 
-ENV REFRESHED_AT=2023-06-15
+ENV REFRESHED_AT=2023-09-29
 
 LABEL Name="senzing/docker-wrap-image-with-senzing-data" \
       Maintainer="support@senzing.com" \
-      Version="1.0.2"
+      Version="1.0.3"
 
 # SENZING_ACCEPT_EULA to be replaced by --build-arg
 
