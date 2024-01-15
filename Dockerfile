@@ -28,7 +28,7 @@ RUN apt update \
 # Install Senzing repository index.
 
 RUN curl \
-      --output /senzingrepo_1.0.0-1_amd64.deb \
+      --output /senzingrepo_1.0.1-1_all.deb \
       https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.1-1_all.deb \
  && apt -y install \
       /senzingrepo_1.0.1-1_all.deb \
