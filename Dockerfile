@@ -29,11 +29,11 @@ RUN apt update \
 
 RUN curl \
       --output /senzingrepo_1.0.0-1_amd64.deb \
-      https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb \
+      https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.1-1_all.deb \
  && apt -y install \
-      /senzingrepo_1.0.0-1_amd64.deb \
+      /senzingrepo_1.0.1-1_all.deb \
  && apt update \
- && rm /senzingrepo_1.0.0-1_amd64.deb
+ && rm /senzingrepo_1.0.1-1_all.deb
 
 # Install Senzing package.
 #   Note: The system location for "data" should be /opt/senzing/data, hence the "mv" command.
