@@ -39,7 +39,7 @@ RUN curl \
 #   Note: The system location for "data" should be /opt/senzing/data, hence the "mv" command.
 
 RUN apt -y install senzingapi \
- && mv /opt/senzing/data/4.0.0/* /opt/senzing/data/ \
+ && mv /opt/senzing/data/4.0/* /opt/senzing/data/ \
  && rm -rf /opt/senzing/g2
 
 # Finally, make the container a non-root container again.
