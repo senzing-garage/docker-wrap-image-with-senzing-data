@@ -15,14 +15,13 @@ ARG SENZING_ACCEPT_EULA=no
 
 USER root
 
-# Install packages via apt.
+# Install packages via apt-get.
 
-RUN apt update \
-  && apt -y install \
+RUN apt-get update \
+  && apt-get -y install \
   apt-transport-https \
   curl \
   gnupg \
-  sudo \
   wget
 
 # Install Senzing repository index.
@@ -30,17 +29,19 @@ RUN apt update \
 RUN curl \
   --output /senzingrepo_2.0.0-1_all.deb \
   https://senzing-production-apt.s3.amazonaws.com/senzingrepo_2.0.0-1_all.deb \
-  && apt -y install \
+  && apt-get -y install \
   /senzingrepo_2.0.0-1_all.deb \
-  && apt update \
+  && apt-get update \
   && rm /senzingrepo_2.0.0-1_all.deb
 
 # Install Senzing package.
 #   Note: The system location for "data" should be /opt/senzing/data, hence the "mv" command.
 
-RUN apt -y install senzingapi \
+RUN apt-get -y install senzingapi \
   && mv /opt/senzing/data/5.0.0/* /opt/senzing/data/ \
   && rm -rf /opt/senzing/g2
+
+HEALTHCHECK CMD apt list --installed | grep senzingapi
 
 # Finally, make the container a non-root container again.
 
